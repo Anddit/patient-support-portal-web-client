@@ -38,13 +38,13 @@ class PatientForm extends Component {
 				</fieldset>
 
 				<fieldset className="form-group">
-					<label>Email:</label>
-					<input {...email} className="form-control" />
+					<label>Name:</label>
+					<input {...name} className="form-control" />
 				</fieldset>
 
 				<fieldset className="form-group">
-					<label>Email:</label>
-					<input {...email} className="form-control" />
+					<label>Indication:</label>
+					<input {...indication} className="form-control" />
 				</fieldset>
 												
 				{this.renderAlert()}
