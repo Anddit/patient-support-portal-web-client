@@ -7,12 +7,13 @@ import {
 	AUTH_ERROR,
 	ADD_PATIENTS,
 	ADD_SOCIAL_WORKERS,
-	ADD_ORGS
+	ADD_ORGS,
+	UPDATE_USER
 } from './types';
 
-const ROOT_URL = 'http://localhost:3090';
+// const ROOT_URL = 'http://localhost:3090';
 
-// const ROOT_URL = 'https://anddit-patient-support.herokuapp.com';
+const ROOT_URL = 'https://anddit-patient-support.herokuapp.com';
 
 export function signinUser({email, password}) {
 	// Normally, action creators return objects,
@@ -97,5 +98,20 @@ export function fetchOrganizations() {
 				dispatch({type: ADD_ORGS, organizations: data.organizations})
 			})
 			.catch(response => dispatch(authError(response.response.data.error)));			
+	}
+}
+
+export function updateUser(userId, userData, userType='patient') {
+	return function(dispatch) {
+		// Submit email/password to the server
+		axios.patch(`${ROOT_URL}/${userType}s/${userId}`, userData)
+			.then(response => {
+				browserHistory.push(`/${userType}s`);
+			})
+			.catch(() => {
+				// If request is bad...
+				// - show an error to the user
+				dispatch(authError('Bad Login Info'));
+			});
 	}
 }

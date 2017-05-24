@@ -41,7 +41,9 @@ class PatientProfile extends Component {
 	}
 
 	showForm() {
+		if (this.state && this.state.editing) {
 			return <PatientForm />
+		}
 	}
 
 

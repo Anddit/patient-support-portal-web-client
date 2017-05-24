@@ -5,9 +5,13 @@ import * as actions from '../../actions/index.js';
 
 class PatientForm extends Component {
 
-	handleFormSubmit({email, password}) {
+	handleFormSubmit({email, password, name, indication}) {
 		// Need to do something to log user in
-		this.props.updateUser({ email, password, name, indication });
+		this.props.updateUser(
+			this.props.currentUser._id, 
+			{ email, password, name, indication },
+			'patient'
+		);
 	}
 
 
@@ -56,7 +60,10 @@ class PatientForm extends Component {
 }
 
 function mapStateToProps(state) {
-	return { errorMessage: state.patients.error };
+	return { 
+		errorMessage: state.patients.error,
+		currentUser: state.auth.user
+	 };
 }
 
 export default reduxForm({

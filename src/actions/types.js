@@ -4,3 +4,4 @@ export const AUTH_ERROR = 'auth_error';
 export const ADD_PATIENTS = 'add_patients';
 export const ADD_SOCIAL_WORKERS = 'add_social_workers';
 export const ADD_ORGS = 'add_orgs';
+export const UPDATE_USER = 'update_user';
