@@ -49,9 +49,7 @@ class SocialWorkerForm extends Component {
 				<fieldset className="form-group">
 					<label>Affiliated With:</label>
 					<input {...organization} className="form-control" />
-				</fieldset>							
-
-				</fieldset>				
+				</fieldset>										
 												
 				{this.renderAlert()}
 				<button action="submit" className="btn btn-primary">Save</button>
