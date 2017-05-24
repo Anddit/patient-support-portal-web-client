@@ -3,14 +3,14 @@ import { reduxForm } from 'redux-form';
 
 import * as actions from '../../actions/index.js';
 
-class PatientForm extends Component {
+class OrgForm extends Component {
 
 	handleFormSubmit({email, name, indication}) {
 		// Need to do something to log user in
 		this.props.updateUser(
 			this.props._id, 
-			{ email, name, indication },
-			'patient'
+			{ email, name, contact, website, description, indications_served, services },
+			'organization'
 		);
 	}
 
@@ -27,7 +27,7 @@ class PatientForm extends Component {
 
 
 	render() {
-		const { handleSubmit, fields: { email,  name, indication }} = this.props;
+		const { handleSubmit, fields: { email, name, contact, website, description, indications_served, services }} = this.props;
 
 		return (
 			<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
@@ -42,9 +42,29 @@ class PatientForm extends Component {
 				</fieldset>
 
 				<fieldset className="form-group">
-					<label>Indication:</label>
-					<input {...indication} className="form-control" />
+					<label>Name:</label>
+					<input {...contact} className="form-control" />
 				</fieldset>
+
+				<fieldset className="form-group">
+					<label>Name:</label>
+					<input {...website} className="form-control" />
+				</fieldset>							
+
+				<fieldset className="form-group">
+					<label>Description:</label>
+					<textarea {...description} className="form-control"></textarea>
+				</fieldset>
+
+				<fieldset className="form-group">
+					<label>Indications Served:</label>
+					<textarea {...indications_served} className="form-control"></textarea>
+				</fieldset>
+
+				<fieldset className="form-group">
+					<label>Indications Served:</label>
+					<textarea {...services} className="form-control"></textarea>
+				</fieldset>				
 												
 				{this.renderAlert()}
 				<button action="submit" className="btn btn-primary">Sign in</button>
@@ -62,6 +82,6 @@ function mapStateToProps(state) {
 }
 
 export default reduxForm({
-	form: 'patient',
-	fields: ['email', 'name', 'indication']
-}, mapStateToProps, actions)(PatientForm);
+	form: 'organization',
+	fields: ['email', 'name', 'contact', 'website', 'description', 'indications_served', 'services']
+}, mapStateToProps, actions)(OrgForm);
