@@ -55,7 +55,7 @@ class OrgProfile extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Patient Profile For:</h1>
+				<h1>Organization Profile For:</h1>
 
 				{this.getOrg() && this.getOrg().email}
 
@@ -69,7 +69,7 @@ class OrgProfile extends Component {
 
 function mapStateToProps(state) {
 	return {
-		patients: state.organizations.organizations,
+		organizations: state.organizations.organizations,
 		currentUser: state.auth.user
 	}
 }
