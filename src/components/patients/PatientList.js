@@ -8,9 +8,9 @@ class PatientList extends Component {
 	componentDidMount() {
 		this.props.fetchPatients();
 
-		this.setState({
-			filter: ''
-		})
+		// this.setState({
+		// 	filter: ''
+		// })
 	}
 
 	isSocialWorker() {
@@ -22,7 +22,7 @@ class PatientList extends Component {
 			return (
 				<div>
 					<label>Search patients:</label>
-					<input value={this.state.filter} onChange={this.changeFilter.bind(this)} />
+					<input />
 				</div>
 			);
 		}
