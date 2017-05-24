@@ -9,7 +9,7 @@ class SocialWorkerForm extends Component {
 		// Need to do something to log user in
 		this.props.updateUser(
 			this.props._id, 
-			{ email, name, contact, website, description, indications_served, services },
+			{ email, name, contact, organization },
 			'social_worker'
 		);
 	}
@@ -27,7 +27,7 @@ class SocialWorkerForm extends Component {
 
 
 	render() {
-		const { handleSubmit, fields: { email, name, contact, website, description, indications_served, services }} = this.props;
+		const { handleSubmit, fields: { email, name, contact, organization }} = this.props;
 
 		return (
 			<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
@@ -47,23 +47,10 @@ class SocialWorkerForm extends Component {
 				</fieldset>
 
 				<fieldset className="form-group">
-					<label>Website URL:</label>
-					<input {...website} className="form-control" />
+					<label>Affiliated With:</label>
+					<input {...organization} className="form-control" />
 				</fieldset>							
 
-				<fieldset className="form-group">
-					<label>Description:</label>
-					<textarea {...description} className="form-control"></textarea>
-				</fieldset>
-
-				<fieldset className="form-group">
-					<label>Indications Served:</label>
-					<textarea {...indications_served} className="form-control"></textarea>
-				</fieldset>
-
-				<fieldset className="form-group">
-					<label>Services Offered:</label>
-					<textarea {...services} className="form-control"></textarea>
 				</fieldset>				
 												
 				{this.renderAlert()}
@@ -83,5 +70,5 @@ function mapStateToProps(state) {
 
 export default reduxForm({
 	form: 'organization',
-	fields: ['email', 'name', 'contact', 'website', 'description', 'indications_served', 'services']
+	fields: ['email', 'name', 'contact', 'organization']
 }, mapStateToProps, actions)(SocialWorkerForm);
