@@ -23,7 +23,7 @@ export function signinUser({email, password}) {
 			.then(response => {
 				// If request is good...
 				// - UPdate state to indicate user is authenticated
-				dispatch({ type: AUTH_USER });
+				dispatch({ type: AUTH_USER, user: response.data.user });
 
 				// - Save the JWT
 				localStorage.setItem('token', response.data.token);

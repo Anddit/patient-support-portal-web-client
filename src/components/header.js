@@ -20,11 +20,22 @@ class Header extends Component {
 		}
 	}
 
+	renderUserInfo() {
+		if (this.props.user) {
+			return (
+				<li className="nav-item">
+					Signed in as {this.props.user.role}
+				</li>
+			);
+		}
+	}
+
 	render() {
 		return (
 			<nav className="navbar navbar-right">
 				<ul className="nav navbar-nav">
 					<Link to="/" className="navbar-brand">Anddit Patient Support</Link>
+					{this.renderUserInfo()}
 					{this.renderLinks()}
 				</ul>
 			</nav>
@@ -34,7 +45,8 @@ class Header extends Component {
 
 function mapStateToProps(state) {
 	return {
-		authenticated: state.auth.authenticated
+		authenticated: state.auth.authenticated,
+		user: state.auth.user
 	};
 }
 

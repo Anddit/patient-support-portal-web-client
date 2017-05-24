@@ -12,13 +12,13 @@ class PatientList extends Component {
 	renderPatients() {
 		if (this.props.patients) {
 			return (
-				<div>
+				<ul>
 				{
 					this.props.patients.map((patient, index) => {
-						return (<Link to={`/patients/${patient._id}`} className="well" key={index}>{patient.email}</Link>)
+						return (<li><Link to={`/patients/${patient._id}`} className="well" key={index}>{patient.email}</Link></li>)
 					})
 				}
-				</div>
+				</ul>
 			);
 		}
 	}
