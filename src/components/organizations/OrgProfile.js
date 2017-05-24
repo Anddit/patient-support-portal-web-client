@@ -45,8 +45,7 @@ class OrgProfile extends Component {
 	}
 
 	showForm() {
-		if (this.isSocialWorker() ||
-				(this.state && this.state.editing)) 
+		if (this.state && this.state.editing)
 		{
 			return <OrgForm _id={this.getOrg() && this.getOrg()._id} />
 		}
