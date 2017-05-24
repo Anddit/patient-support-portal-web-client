@@ -5,11 +5,11 @@ import * as actions from '../../actions/index.js';
 
 class PatientForm extends Component {
 
-	handleFormSubmit({email, password, name, indication}) {
+	handleFormSubmit({email, name, indication}) {
 		// Need to do something to log user in
 		this.props.updateUser(
-			this.props.currentUser._id, 
-			{ email, password, name, indication },
+			this.props._id, 
+			{ email, name, indication },
 			'patient'
 		);
 	}
@@ -34,11 +34,6 @@ class PatientForm extends Component {
 				<fieldset className="form-group">
 					<label>Email:</label>
 					<input {...email} className="form-control" />
-				</fieldset>
-
-				<fieldset className="form-group">
-					<label>Password:</label>
-					<input {...password} type="password" className="form-control" />
 				</fieldset>
 
 				<fieldset className="form-group">
@@ -68,5 +63,5 @@ function mapStateToProps(state) {
 
 export default reduxForm({
 	form: 'patient',
-	fields: ['email', 'password', 'name', 'indication']
+	fields: ['email', 'name', 'indication']
 }, mapStateToProps, actions)(PatientForm);

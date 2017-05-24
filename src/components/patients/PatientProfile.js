@@ -20,6 +20,28 @@ class PatientProfile extends Component {
 		}
 	}
 
+	isSocialWorker() {
+		return this.props.currentUser && this.props.currentUser.role === 'social_worker'
+	}
+
+	verifyButton() {
+		if (this.isSocialWorker()) {
+			return (
+				<button className="btn btn-primary" onClick={this.verify.bind(this)}>
+					Verify this patient
+				</button>
+			)
+		}
+	}
+
+	verify() {
+		this.props.updateUser(
+			this.getPatient()._id,
+			{verified: true},
+			'patient'
+		);
+	}
+
 	editButton() {
 		if (this.props.currentUser) {
 			if (this.getPatient() && this.getPatient()._id === this.props.currentUser._id) {
@@ -41,8 +63,10 @@ class PatientProfile extends Component {
 	}
 
 	showForm() {
-		if (this.state && this.state.editing) {
-			return <PatientForm />
+		if (this.isSocialWorker() ||
+				(this.state && this.state.editing)) 
+		{
+			return <PatientForm _id={this.getPatient() && this.getPatient()._id} />
 		}
 	}
 
@@ -54,7 +78,7 @@ class PatientProfile extends Component {
 
 				{this.getPatient() && this.getPatient().email}
 
-				{this.editButton()}
+				{this.editButton()} {this.verifyButton()}
 
 				{this.showForm()}
 			</div>
