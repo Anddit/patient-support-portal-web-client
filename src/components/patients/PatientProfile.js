@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import * as actions from '../../actions/index.js';
 
+import PatientForm from './PatientForm.js';
+
 class PatientProfile extends Component {
 	componentDidMount() {
 		this.props.fetchPatients();

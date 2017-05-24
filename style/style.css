@@ -8,11 +8,11 @@
 }
 
 .organization {
-	.border-style: solid;
-	.border-color: green;
+	border-style: solid;
+	border-color: green;
 }
 
 .patient {
-	.border-style: solid;
-	.border-color: yellow;
+	border-style: solid;
+	border-color: yellow;
 }
