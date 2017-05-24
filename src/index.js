@@ -13,6 +13,7 @@ import Feature from './components/feature';
 import PatientList from './components/patients/PatientList';
 import PatientProfile from './components/patients/PatientProfile';
 import SocialWorkerList from './components/social_workers/social_worker_list.js';
+import SocialWorkerProfile from './components/social_workers/SocialWorkerProfile';
 import OrgList from './components/organizations/OrgList';
 import OrgProfile from './components/organizations/OrgProfile';
 
@@ -30,6 +31,7 @@ ReactDOM.render(
         <Route path="/patients" component={PatientList} />
         <Route path="/patients/:id" component={PatientProfile} />
         <Route path="/social_workers" component={SocialWorkerList} />
+        <Route path="/social_workers/:id" component={SocialWorkerProfile} />        
         <Route path="/organizations" component={OrgList} />
         <Route path="/organizations/:id" component={OrgProfile} />                      
   		</Route>
