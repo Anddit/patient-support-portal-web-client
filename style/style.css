@@ -1,3 +1,18 @@
 .error {
 	color: red;
 }
+
+.social_worker {
+	border-style: solid;
+	border-color: red;
+}
+
+.organization {
+	.border-style: solid;
+	.border-color: green;
+}
+
+.patient {
+	.border-style: solid;
+	.border-color: yellow;
+}

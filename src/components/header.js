@@ -24,7 +24,7 @@ class Header extends Component {
 		if (this.props.user) {
 			return (
 				<li className="nav-item">
-					Signed in as {this.props.user.role}
+					<span className={this.props.user.role}>Signed in as {this.props.user.role}</span>
 				</li>
 			);
 		}
