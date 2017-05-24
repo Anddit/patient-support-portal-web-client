@@ -42,12 +42,12 @@ class OrgForm extends Component {
 				</fieldset>
 
 				<fieldset className="form-group">
-					<label>Name:</label>
+					<label>Contact Info:</label>
 					<input {...contact} className="form-control" />
 				</fieldset>
 
 				<fieldset className="form-group">
-					<label>Name:</label>
+					<label>Website URL:</label>
 					<input {...website} className="form-control" />
 				</fieldset>							
 
@@ -62,7 +62,7 @@ class OrgForm extends Component {
 				</fieldset>
 
 				<fieldset className="form-group">
-					<label>Indications Served:</label>
+					<label>Services Offered:</label>
 					<textarea {...services} className="form-control"></textarea>
 				</fieldset>				
 												
