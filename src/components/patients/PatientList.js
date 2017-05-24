@@ -7,6 +7,31 @@ import * as actions from '../../actions/index.js';
 class PatientList extends Component {
 	componentDidMount() {
 		this.props.fetchPatients();
+
+		this.setState({
+			filter: ''
+		})
+	}
+
+	isSocialWorker() {
+		return this.props.currentUser && this.props.currentUser.role === 'social_worker';
+	}
+
+	filterForm() {
+		if (this.isSocialWorker()) {
+			return (
+				<div>
+					<label>Search patients:</label>
+					<input value={this.state.filter} onChange={this.changeFilter.bind(this)} />
+				</div>
+			);
+		}
+	}
+
+	changeFilter(event) {
+		this.setState({
+			filter: event.target.value
+		})
 	}
 
 	filteredPatients() {
@@ -41,6 +66,8 @@ class PatientList extends Component {
 		return (
 			<div>
 				<h1>The Patient List Page</h1>
+
+				{this.filterForm()}
 
 				{this.renderPatients()}
 			</div>
