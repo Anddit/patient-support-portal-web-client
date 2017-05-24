@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 import * as actions from '../../actions/index.js';
 
@@ -14,7 +15,7 @@ class PatientList extends Component {
 				<div>
 				{
 					this.props.patients.map((patient, index) => {
-						return (<div className="well" key={index}>{patient.email}</div>)
+						return (<Link to={`/patients/${patient._id}`} className="well" key={index}>{patient.email}</Link>)
 					})
 				}
 				</div>
