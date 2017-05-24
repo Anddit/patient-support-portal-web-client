@@ -20,6 +20,20 @@ class SocialWorkerProfile extends Component {
 		}
 	}
 
+	isPatient() {
+		return this.props.currentUser && this.props.currentUser.role === 'patient';
+	}
+
+	verificationRequestButton() {
+		if (this.isPatient()) {
+			return (
+				<button className="btn btn-primary">
+					Request Verification
+				</button>
+			);
+		}
+	}
+
 	isOwnSocialWorker() {
 		if (this.props.currentUser) {
 			return this.getSocialWorker() && (this.getSocialWorker()._id === this.props.currentUser._id);
@@ -59,7 +73,7 @@ class SocialWorkerProfile extends Component {
 
 				{this.getSocialWorker() && this.getSocialWorker().email}
 
-				{this.editButton()}
+				{this.editButton()} {this.verificationRequestButton()}
 
 				{this.showForm()}
 			</div>
