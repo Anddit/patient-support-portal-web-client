@@ -5,12 +5,14 @@ import {
 	AUTH_USER,
 	UNAUTH_USER,
 	AUTH_ERROR,
-	ADD_PATIENTS
+	ADD_PATIENTS,
+	ADD_SOCIAL_WORKERS,
+	ADD_ORGS
 } from './types';
 
-const ROOT_URL = 'http://localhost:3090';
+// const ROOT_URL = 'http://localhost:3090';
 
-// const ROOT_URL = 'https://anddit-patient-support.herokuapp.com';
+const ROOT_URL = 'https://anddit-patient-support.herokuapp.com';
 
 export function signinUser({email, password}) {
 	// Normally, action creators return objects,
@@ -75,5 +77,25 @@ export function fetchPatients() {
 				dispatch({type: ADD_PATIENTS, patients: data.patients})
 			})
 			.catch(response => dispatch(authError(response.response.data.error)));
+	}
+}
+
+export function fetchSocialWorkers() {
+	return function(dispatch) {
+		axios.get(`${ROOT_URL}/social_workers`)
+			.then(({data}) => {
+				dispatch({type: ADD_SOCIAL_WORKERS, social_workers: data.social_workers})
+			})
+			.catch(response => dispatch(authError(response.response.data.error)));
+	}
+}
+
+export function fetchOrganizations() {
+	return function(dispatch) {
+		axios.get(`${ROOT_URL}/organizations`)
+			.then(({data}) => {
+				dispatch({type: ADD_ORGS, organizations: data.organizations})
+			})
+			.catch(response => dispatch(authError(response.response.data.error)));			
 	}
 }
