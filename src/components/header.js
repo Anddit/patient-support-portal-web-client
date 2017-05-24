@@ -24,7 +24,7 @@ class Header extends Component {
 		return (
 			<nav className="navbar navbar-right">
 				<ul className="nav navbar-nav">
-					<Link to="/" className="navbar-brand">Redux Auth</Link>
+					<Link to="/" className="navbar-brand">Anddit Patient Support</Link>
 					{this.renderLinks()}
 				</ul>
 			</nav>

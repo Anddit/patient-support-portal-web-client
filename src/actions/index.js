@@ -7,7 +7,7 @@ import {
 	AUTH_ERROR
 } from './types';
 
-const ROOT_URL = 'http://localhost:3090';
+const ROOT_URL = 'https://anddit-patient-support.herokuapp.com';
 
 export function signinUser({email, password}) {
 	// Normally, action creators return objects,
