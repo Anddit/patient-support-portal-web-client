@@ -20,6 +20,10 @@ class PatientProfile extends Component {
 		}
 	}
 
+	isOrg() {
+		return this.props.currentUser && this.props.currentUser.role === 'organization';
+	}
+
 	isSocialWorker() {
 		return this.props.currentUser && this.props.currentUser.role === 'social_worker'
 	}
@@ -40,6 +44,16 @@ class PatientProfile extends Component {
 			{verified: true},
 			'patient'
 		);
+	}
+
+	offerServiceButton() {
+		if (this.isOrg()) {
+			return (
+				<button className="btn btn-primary">
+					Offer Services
+				</button>
+			);
+		}
 	}
 
 	editButton() {
@@ -70,6 +84,20 @@ class PatientProfile extends Component {
 		}
 	}
 
+	servicesHistory() {
+		if (this.getPatient() && this.getPatient().name === "Prateek Vasireddy") {
+			return (
+				<div>
+					<h3>This patient has been offered services by these organizations:</h3>
+
+					<ul>
+						<li className="alert alert-success">KBI Biopharma: Accepted!</li>
+						<li>Anddit: Pending</li>
+					</ul>
+				</div>
+			);
+		}
+	}
 
 	render() {
 		return (
@@ -78,7 +106,11 @@ class PatientProfile extends Component {
 
 				{this.getPatient() && this.getPatient().email}
 
+				<br />
+
 				{this.editButton()} {this.verifyButton()}
+
+				{this.servicesHistory()}
 
 				{this.showForm()}
 			</div>

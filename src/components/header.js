@@ -36,8 +36,9 @@ class Header extends Component {
 				<ul className="nav navbar-nav">
 					<Link to="/" className="navbar-brand">Anddit Patient Support</Link>
 					{this.renderUserInfo()}
+					<li className="nav-item"><Link to="/patients">Patients</Link></li>					
 					<li className="nav-item"><Link to="/social_workers">Social Workers</Link></li>
-					<li className="nav-item"><Link to="/organizations">organizations</Link></li>
+					<li className="nav-item"><Link to="/organizations">Organizations</Link></li>
 					{this.renderLinks()}
 				</ul>
 			</nav>

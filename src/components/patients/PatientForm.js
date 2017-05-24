@@ -47,7 +47,7 @@ class PatientForm extends Component {
 				</fieldset>
 												
 				{this.renderAlert()}
-				<button action="submit" className="btn btn-primary">Sign in</button>
+				<button action="submit" className="btn btn-primary">Save</button>
 			</form>
 		);
 	}
