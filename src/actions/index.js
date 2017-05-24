@@ -4,8 +4,11 @@ import { browserHistory } from 'react-router';
 import { 
 	AUTH_USER,
 	UNAUTH_USER,
-	AUTH_ERROR
+	AUTH_ERROR,
+	ADD_PATIENTS
 } from './types';
+
+// const ROOT_URL = 'http://localhost:3090';
 
 const ROOT_URL = 'https://anddit-patient-support.herokuapp.com';
 
@@ -26,7 +29,7 @@ export function signinUser({email, password}) {
 				localStorage.setItem('token', response.data.token);
 
 				// - redirect to the route '/feature'
-				browserHistory.push('/feature');
+				browserHistory.push('/patients');
 			})
 			.catch(() => {
 				// If request is bad...
@@ -42,7 +45,7 @@ export function signupUser({ email, password }) {
 			.then(response => {
 				dispatch({type: AUTH_USER});
 				localStorage.setItem('token', response.data.token);
-				browserHistory.push('/feature');
+				browserHistory.push('/patients');
 			})
 			.catch(response => {
 				dispatch(authError(response.response.data.error));
@@ -62,5 +65,15 @@ export function signoutUser() {
 
 	return {
 		type: UNAUTH_USER
+	}
+}
+
+export function fetchPatients() {
+	return function(dispatch) {
+		axios.get(`${ROOT_URL}/patients`)
+			.then(({data}) => {
+				dispatch({type: ADD_PATIENTS, patients: data.patients})
+			})
+			.catch(response => dispatch(authError(response.response.data.error)));
 	}
 }

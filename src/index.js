@@ -11,6 +11,7 @@ import Signup from './components/auth/signup';
 import Signout from './components/auth/signout';
 import Feature from './components/feature';
 import PatientList from './components/patients/PatientList';
+import PatientProfile from './components/patients/PatientProfile';
 
 import reducers from './reducers';
 
@@ -23,8 +24,8 @@ ReactDOM.render(
   			<Route path="/signin" component={Signin} />
   			<Route path="/signup" component={Signup} />  			
   			<Route path="/signout" component={Signout} />
-  			<Route path="/feature" component={PatientList} />
-        <Route path="/patients" component={PatientList} />        	
+        <Route path="/patients" component={PatientList} />
+        <Route path="/patients/:id" component={PatientProfile} /> 	
   		</Route>
   	</Router>
   </Provider>
