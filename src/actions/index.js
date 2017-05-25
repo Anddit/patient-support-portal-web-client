@@ -15,6 +15,25 @@ import {
 
 const ROOT_URL = 'https://anddit-patient-support.herokuapp.com';
 
+// when a user visits the site, check if they already have
+// a valid JWT
+// If so, load the user data
+export function checkAuth() {
+	return function(dispatch) {
+		if(localStorage.getItem('token')) {
+			axios.get(`${ROOT_URL}/users?token=${localStorage.getItem('token')}`)
+				.then(({data}) => {
+					dispatch({ type: AUTH_USER, user: data.user})
+
+					browserHistory.push(`/${data.user.role}s/${data.user._id}`)
+				})
+				.catch(() => dispatch(authError('Something went wrong')));
+		}
+
+		dispatch(authError('Not logged in'));
+	}
+}
+
 export function signinUser({email, password}) {
 	// Normally, action creators return objects,
 	// but with redux-thunk, can return a function
