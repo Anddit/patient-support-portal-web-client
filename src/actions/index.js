@@ -21,16 +21,16 @@ const ROOT_URL = 'https://anddit-patient-support.herokuapp.com';
 export function checkAuth() {
 	return function(dispatch) {
 		if(localStorage.getItem('token')) {
-			axios.get(`${ROOT_URL}/users?token=${localStorage.getItem('token')}`)
+			axios.get(`${ROOT_URL}/users/current?token=${localStorage.getItem('token')}`)
 				.then(({data}) => {
 					dispatch({ type: AUTH_USER, user: data.user})
 
 					browserHistory.push(`/${data.user.role}s/${data.user._id}`)
 				})
 				.catch(() => dispatch(authError('Something went wrong')));
+		} else {
+			dispatch(authError('Not logged in'));
 		}
-
-		dispatch(authError('Not logged in'));
 	}
 }
 
