@@ -26,8 +26,8 @@ class PatientList extends Component {
 			return (
 				<ul>
 				{
-					this.filteredPatients().map((patient, index) => {
-						return (<li><Link to={`/patients/${patient._id}`} className="well" key={index}>{patient.email}</Link></li>)
+					this.filteredPatients().map(patient => {
+						return (<li><Link to={`/patients/${patient._id}`} className="well" key={patient._id}>{patient.email}</Link></li>)
 					})
 				}
 				</ul>
