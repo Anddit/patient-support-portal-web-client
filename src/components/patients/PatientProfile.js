@@ -106,6 +106,10 @@ class PatientProfile extends Component {
 
 				{this.getPatient() && this.getPatient().email}
 
+				<p>Name: {this.getPatient() && this.getPatient().name}</p>				
+
+				<p>Indication: {this.getPatient() && this.getPatient().indication}</p>
+
 				<br />
 
 				{this.editButton()} {this.verifyButton()}
