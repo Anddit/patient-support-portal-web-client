@@ -8,6 +8,8 @@ import PatientForm from './PatientForm.js';
 class PatientProfile extends Component {
 
 	componentWillMount() {
+		this.props.fetchPatients();
+
 		this.props.fetchPatient(this.props.params.id);
 
 		this.setState({
@@ -16,10 +18,8 @@ class PatientProfile extends Component {
 	}
 
 	getPatient() {
-		if (this.props.patients) {
-			return this.props.patients.find(patient => {
-				return parseInt(patient._id) == parseInt(this.props.params.id)
-			})
+		if (this.props.patient) {
+			return this.props.patient;
 		}
 	}
 
@@ -107,9 +107,11 @@ class PatientProfile extends Component {
 			<div>
 				<h1>Patient Profile For:</h1>
 
-				{this.props.patient.email}
+				{this.getPatient() && this.getPatient().email}
 
 				<br />
+
+				<p>Name: {this.getPatient() && this.getPatient().name}</p>
 
 				{this.editButton()} {this.verifyButton()}
 
