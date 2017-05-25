@@ -6,10 +6,16 @@ import * as actions from '../../actions/index.js';
 import PatientForm from './PatientForm.js';
 
 class PatientProfile extends Component {
-	componentDidMount() {
-		this.props.fetchPatients();
-		console.log(this.props.params.id);
-		this.setState({editing: false});
+	constructor(props) {
+		super(props);
+
+		this.setState({
+			editing: false
+		})
+	}
+
+	componentWillMount() {
+		this.props.fetchPatient(this.props.params.id);
 	}
 
 	getPatient() {
@@ -104,7 +110,7 @@ class PatientProfile extends Component {
 			<div>
 				<h1>Patient Profile For:</h1>
 
-				{this.getPatient() && this.getPatient().email}
+				{this.props.patient.email}
 
 				<br />
 
@@ -121,6 +127,7 @@ class PatientProfile extends Component {
 function mapStateToProps(state) {
 	return {
 		patients: state.patients.patients,
+		patient: state.patients.patient,
 		currentUser: state.auth.user
 	}
 }

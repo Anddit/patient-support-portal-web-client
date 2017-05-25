@@ -6,6 +6,7 @@ import {
 	UNAUTH_USER,
 	AUTH_ERROR,
 	ADD_PATIENTS,
+	SET_PATIENT,
 	ADD_SOCIAL_WORKERS,
 	ADD_ORGS,
 	UPDATE_USER
@@ -23,9 +24,9 @@ export function checkAuth() {
 		if(localStorage.getItem('token')) {
 			axios.get(`${ROOT_URL}/users/current?token=${localStorage.getItem('token')}`)
 				.then(({data}) => {
-					dispatch({ type: AUTH_USER, user: data.user})
+					dispatch({ type: AUTH_USER, user: data.user});
 
-					browserHistory.push(`/${data.user.role}s/${data.user._id}`)
+					browserHistory.push(`/${data.user.role}s/${data.user._id}`);
 				})
 				.catch(() => dispatch(authError('Something went wrong')));
 		} else {
@@ -42,16 +43,16 @@ export function signinUser({email, password}) {
 	return function(dispatch) {
 		// Submit email/password to the server
 		axios.post(`${ROOT_URL}/signin`, { email, password })
-			.then(response => {
+			.then(({data}) => {
 				// If request is good...
 				// - UPdate state to indicate user is authenticated
-				dispatch({ type: AUTH_USER, user: response.data.user });
+				dispatch({ type: AUTH_USER, user: data.user });
 
 				// - Save the JWT
-				localStorage.setItem('token', response.data.token);
+				localStorage.setItem('token', data.token);
 
-				// - redirect to the route '/feature'
-				browserHistory.push('/patients');
+				// - redirect to the user's profile page
+				browserHistory.push(`/${data.user.role}s/${data.user._id}`);
 			})
 			.catch(() => {
 				// If request is bad...
@@ -95,6 +96,16 @@ export function fetchPatients() {
 		axios.get(`${ROOT_URL}/patients`)
 			.then(({data}) => {
 				dispatch({type: ADD_PATIENTS, patients: data.patients})
+			})
+			.catch(response => dispatch(authError(response.response.data.error)));
+	}
+}
+
+export function fetchPatient(id) {
+	return function(dispatch) {
+		axios.get(`${ROOT_URL}/patients/${id}`)
+			.then(({data}) => {
+				dispatch({type: SET_PATIENT, patient: data.patient})
 			})
 			.catch(response => dispatch(authError(response.response.data.error)));
 	}
