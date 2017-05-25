@@ -6,16 +6,13 @@ import * as actions from '../../actions/index.js';
 import PatientForm from './PatientForm.js';
 
 class PatientProfile extends Component {
-	constructor(props) {
-		super(props);
-
-		this.setState({
-			editing: false
-		})
-	}
 
 	componentWillMount() {
 		this.props.fetchPatient(this.props.params.id);
+
+		this.setState({
+			editing: false
+		})		
 	}
 
 	getPatient() {
