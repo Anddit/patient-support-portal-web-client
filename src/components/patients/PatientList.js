@@ -5,9 +5,21 @@ import { Link } from 'react-router';
 import * as actions from '../../actions/index.js';
 
 class PatientList extends Component {
-	componentDidMount() {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			searchFilter: ''
+		};	
+	}
+
+	componentWillMount() {
 		this.props.fetchPatients();
 	}
+
+	isSocialWorker() {
+		return this.props.currentUser && this.props.currentUser.role === 'social_worker';
+	}	
 
 	filteredPatients() {
 		if (this.props.currentUser.role === 'organization') {
@@ -15,10 +27,29 @@ class PatientList extends Component {
 				return patient.verified && patient.verified === true
 			});
 		} else if (this.props.currentUser.role === 'social_worker') {
-			return this.props.patients;
+			return this.props.patients.filter(patient => {
+				return patient.email.includes(this.state.searchFilter)
+			});
 		} else {
 			return this.props.patients;
 		}
+	}
+
+	filterForm() {
+		if (this.isSocialWorker()) {
+			return (
+				<div>
+					<label>Search patients:</label>
+					<input value={this.state.searchFilter} onChange={this.changeFilter.bind(this)} />
+				</div>
+			);
+		}
+	}
+
+	changeFilter(event) {
+		this.setState({
+			searchFilter: event.target.value
+		})
 	}
 
 	renderPatients() {
@@ -41,6 +72,8 @@ class PatientList extends Component {
 		return (
 			<div>
 				<h1>The Patient List Page</h1>
+
+				{this.filterForm()}
 
 				{this.renderPatients()}
 			</div>
