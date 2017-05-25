@@ -61,7 +61,7 @@ class PatientProfile extends Component {
 			if (this.getPatient() && this.getPatient()._id === this.props.currentUser._id) {
 				return (
 					<button className="btn btn-primary" onClick={this.toggleEdit.bind(this)}>
-						Edit
+						Edit Profile
 					</button>
 				);
 			}

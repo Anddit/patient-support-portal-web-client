@@ -59,6 +59,18 @@ class OrgProfile extends Component {
 
 				{this.getOrg() && this.getOrg().email}
 
+				<br />
+
+				{this.getOrg() && this.getOrg().name}
+
+				<br />
+
+				{this.getOrg() && this.getOrg().description}
+
+				<br />
+
+				{this.getOrg() && this.getOrg().website}
+
 				{this.editButton()}
 
 				{this.showForm()}

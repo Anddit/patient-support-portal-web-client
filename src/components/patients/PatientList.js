@@ -17,7 +17,7 @@ class PatientList extends Component {
 		} else if (this.props.currentUser.role === 'social_worker') {
 			return this.props.patients;
 		} else {
-			return [];
+			return this.props.patients;
 		}
 	}
 

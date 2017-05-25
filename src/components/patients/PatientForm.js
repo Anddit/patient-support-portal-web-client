@@ -42,9 +42,19 @@ class PatientForm extends Component {
 				</fieldset>
 
 				<fieldset className="form-group">
-					<label>Indication:</label>
-					<input {...indication} className="form-control" />
+					<label>Indication: cancer</label>
+					<input {...indication} type="checkbox" className="form-control" />
 				</fieldset>
+
+				<fieldset className="form-group">
+					<label>Indication: blood disorder</label>
+					<input {...indication} type="checkbox" className="form-control" />
+				</fieldset>
+
+				<fieldset className="form-group">
+					<label>Indication: illness</label>
+					<input {...indication} type="checkbox" className="form-control" />
+				</fieldset>				
 												
 				{this.renderAlert()}
 				<button action="submit" className="btn btn-primary">Save</button>
