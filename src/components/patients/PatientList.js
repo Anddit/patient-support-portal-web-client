@@ -55,10 +55,10 @@ class PatientList extends Component {
 	renderPatients() {
 		if (this.props.currentUser && this.props.patients) {
 			return (
-				<ul>
+				<ul className="list-group">
 				{
 					this.filteredPatients().map(patient => {
-						return (<li><Link to={`/patients/${patient._id}`} className="well" key={patient._id}>{patient.email}</Link></li>)
+						return (<li className="list-group-item"><Link to={`/patients/${patient._id}`} className="well" key={patient._id}>{patient.email}</Link></li>)
 					})
 				}
 				</ul>

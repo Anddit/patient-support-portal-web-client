@@ -12,10 +12,10 @@ class OrganizationList extends Component {
 	renderOrganizations() {
 		if (this.props.organizations) {
 			return (
-				<ul>
+				<ul className="list-group">
 				{
 					this.props.organizations.map((organization, index) => {
-						return (<li><Link to={`/organizations/${organization._id}`} className="well" key={index}>{organization.email}</Link></li>)
+						return (<li className="list-group-item"><Link to={`/organizations/${organization._id}`} className="well" key={index}>{organization.email}</Link></li>)
 					})
 				}
 				</ul>

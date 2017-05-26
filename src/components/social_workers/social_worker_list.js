@@ -12,10 +12,10 @@ class SocialWorkerList extends Component {
 	renderSocialWorkers() {
 		if (this.props.social_workers) {
 			return (
-				<ul>
+				<ul className="list-group">
 				{
 					this.props.social_workers.map((social_worker, index) => {
-						return (<li><Link to={`/social_workers/${social_worker._id}`} className="well" key={index}>{social_worker.email}</Link></li>)
+						return (<li className="list-group-item"><Link to={`/social_workers/${social_worker._id}`} className="well" key={index}>{social_worker.email}</Link></li>)
 					})
 				}
 				</ul>
