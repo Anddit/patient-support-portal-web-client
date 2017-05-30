@@ -1,9 +1,16 @@
-body {
+#root-container {
   background: #fff;
   font-family: $avenir;
   font-size: 16px;
   line-height: 1.5em;
   color: #4b4b46;
+
+  @extend %clear;
+  width: 88%;
+  margin: 0 auto;
+  max-width: 610px;
+
+  &.wide { max-width: 930px; }  
 }
 
 .wrapper {

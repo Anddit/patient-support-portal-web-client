@@ -12,17 +12,11 @@ class Header extends Component {
 
 	renderLinks() {
 		if (this.props.authenticated) {
-			return <li className="nav-item">
-				<Link className="nav-link" to="/signout">Sign Out</Link>
-			</li>	
+			return <Link className="nav-link" to="/signout">Sign Out</Link>
 		}	else {
 			return [
-				<li className="nav-item" key={1}>
-					<Link className="nav-link" to="/signin">Sign in</Link>
-				</li>,
-				<li className="nav-item" key={2}>
-					<Link className="nav-link" to="/signup">Sign up</Link>
-				</li>
+				<Link className="nav-link" to="/signin" key={1}>Sign in</Link>,
+				<Link className="nav-link" to="/signup" key={2}>Sign up</Link>
 			];
 		}
 	}
@@ -30,24 +24,22 @@ class Header extends Component {
 	renderUserInfo() {
 		if (this.props.user) {
 			return (
-				<li className="nav-item">
-					<span className={this.props.user.role}>Signed in as {this.props.user.role}</span>
-				</li>
-			);
+				<span className={this.props.user.role}>Signed in as {this.props.user.role}</span>
+			)
 		}
 	}
 
 	render() {
 		return (
-			<nav className="navbar navbar-right">
-				<ul className="nav navbar-nav">
-					<Link to="/" className="navbar-brand">Anddit Patient Support</Link>
+			<nav className="nav small-caps">
+				<ul className="">
+					<Link to="/" className="">Anddit Patient Support</Link>
 					{this.renderUserInfo()}
-					<li className="nav-item"><Link to="/patients">Patients</Link></li>					
-					<li className="nav-item"><Link to="/social_workers">Social Workers</Link></li>
-					<li className="nav-item"><Link to="/organizations">Organizations</Link></li>
-					{this.renderLinks()}
 				</ul>
+				<Link to="/patients">Patients</Link>				
+				<Link to="/social_workers">Social Workers</Link>
+				<Link to="/organizations">Organizations</Link>
+				{this.renderLinks()}				
 			</nav>
 		);
 	}
