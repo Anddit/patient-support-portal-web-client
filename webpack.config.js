@@ -18,6 +18,9 @@ module.exports = {
     {
       test: /\.scss$/,
       loaders: ["style-loader", "css-loader", "sass-loader", "import-glob-loader"]
+    },
+    { test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/, 
+      loader: "file" 
     }]
   },
   resolve: {

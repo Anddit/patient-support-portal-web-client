@@ -41,9 +41,6 @@ class Header extends Component {
 					</ul>			
 				</nav>
 				<div className="right">
-					<Link to="/patients">Patients</Link>				
-					<Link to="/social_workers">Social Workers</Link>
-					<Link to="/organizations">Organizations</Link>
 					{this.renderLinks()}
 				</div>
 			</header>

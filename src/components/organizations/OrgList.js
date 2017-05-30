@@ -26,7 +26,7 @@ class OrganizationList extends Component {
 	render() {
 		return (
 			<div>
-				<h1>The Organization List Page</h1>
+				<h1>All Organizations</h1>
 
 				{this.renderOrganizations()}
 			</div>

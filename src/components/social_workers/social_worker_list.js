@@ -26,7 +26,7 @@ class SocialWorkerList extends Component {
 	render() {
 		return (
 			<div>
-				<h1>The Social Worker List Page</h1>
+				<h1>All Social Workers</h1>
 
 				{this.renderSocialWorkers()}
 			</div>
