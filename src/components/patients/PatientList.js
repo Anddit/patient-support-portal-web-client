@@ -55,13 +55,13 @@ class PatientList extends Component {
 	renderPatients() {
 		if (this.props.currentUser && this.props.patients) {
 			return (
-				<ul className="list-group">
+				<section className="feed">
 				{
 					this.filteredPatients().map(patient => {
-						return (<li className="list-group-item"><Link to={`/patients/${patient._id}`} className="well" key={patient._id}>{patient.email}</Link></li>)
+						return (<div className="card"><Link to={`/patients/${patient._id}`} key={patient._id}>{patient.email}</Link></div>)
 					})
 				}
-				</ul>
+				</section>
 			);
 		} else {
 			return <h1>You are not authorized to see this page</h1>
@@ -71,7 +71,7 @@ class PatientList extends Component {
 	render() {
 		return (
 			<div>
-				<h1>The Patient List Page</h1>
+				<h1>Patients</h1>
 
 				{this.filterForm()}
 

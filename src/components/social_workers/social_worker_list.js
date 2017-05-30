@@ -12,13 +12,13 @@ class SocialWorkerList extends Component {
 	renderSocialWorkers() {
 		if (this.props.social_workers) {
 			return (
-				<ul className="list-group">
+				<section className="feed">
 				{
 					this.props.social_workers.map((social_worker, index) => {
-						return (<li className="list-group-item"><Link to={`/social_workers/${social_worker._id}`} className="well" key={index}>{social_worker.email}</Link></li>)
+						return (<div className="card"><Link to={`/social_workers/${social_worker._id}`} key={index}>{social_worker.email}</Link></div>)
 					})
 				}
-				</ul>
+				</section>
 			);
 		}
 	}

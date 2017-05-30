@@ -12,13 +12,13 @@ class OrganizationList extends Component {
 	renderOrganizations() {
 		if (this.props.organizations) {
 			return (
-				<ul className="list-group">
+				<section className="feed">
 				{
 					this.props.organizations.map((organization, index) => {
-						return (<li className="list-group-item"><Link to={`/organizations/${organization._id}`} className="well" key={index}>{organization.email}</Link></li>)
+						return (<div className="card"><Link to={`/organizations/${organization._id}`} key={index}>{organization.email}</Link></div>)
 					})
 				}
-				</ul>
+				</section>
 			);
 		}
 	}

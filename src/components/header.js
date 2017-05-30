@@ -33,17 +33,19 @@ class Header extends Component {
 		return (
 			<header class="header">
 				<p class="logo">
-					<Link to="/" className="">Anddit Patient Support</Link>
+					<Link to="/" id="logoBtn">Anddit Patient Support</Link>
 				</p>
 				<nav className="nav small-caps">
 					<ul className="">
 						{this.renderUserInfo()}
 					</ul>			
 				</nav>
-				<Link to="/patients">Patients</Link>				
-				<Link to="/social_workers">Social Workers</Link>
-				<Link to="/organizations">Organizations</Link>
-				{this.renderLinks()}	
+				<div className="right">
+					<Link to="/patients">Patients</Link>				
+					<Link to="/social_workers">Social Workers</Link>
+					<Link to="/organizations">Organizations</Link>
+					{this.renderLinks()}
+				</div>
 			</header>
 		);
 	}
