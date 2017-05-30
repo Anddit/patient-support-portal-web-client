@@ -24,7 +24,7 @@ const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 require('../style/application.scss');
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)} id="root-container">
+  <Provider store={createStoreWithMiddleware(reducers)}>
   	<Router history={browserHistory}>
   		<Route path="/" component={App}>
   			<Route path="/signin" component={Signin} />

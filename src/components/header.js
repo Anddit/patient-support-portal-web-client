@@ -24,23 +24,27 @@ class Header extends Component {
 	renderUserInfo() {
 		if (this.props.user) {
 			return (
-				<span className={this.props.user.role}>Signed in as {this.props.user.role}</span>
+				<li className={this.props.user.role}>Signed in as {this.props.user.role}</li>
 			)
 		}
 	}
 
 	render() {
 		return (
-			<nav className="nav small-caps">
-				<ul className="">
+			<header class="header">
+				<p class="logo">
 					<Link to="/" className="">Anddit Patient Support</Link>
-					{this.renderUserInfo()}
-				</ul>
+				</p>
+				<nav className="nav small-caps">
+					<ul className="">
+						{this.renderUserInfo()}
+					</ul>			
+				</nav>
 				<Link to="/patients">Patients</Link>				
 				<Link to="/social_workers">Social Workers</Link>
 				<Link to="/organizations">Organizations</Link>
-				{this.renderLinks()}				
-			</nav>
+				{this.renderLinks()}	
+			</header>
 		);
 	}
 }

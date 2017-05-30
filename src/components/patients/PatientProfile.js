@@ -57,7 +57,7 @@ class PatientProfile extends Component {
 	offerServiceButton() {
 		if (this.isOrg()) {
 			return (
-				<button className="btn btn-primary">
+				<button className="btn mint">
 					Offer Services
 				</button>
 			);
@@ -68,7 +68,7 @@ class PatientProfile extends Component {
 		if (this.props.currentUser) {
 			if (this.getPatient() && this.getPatient()._id === this.props.currentUser._id) {
 				return (
-					<button className="btn btn-primary" onClick={this.toggleEdit.bind(this)}>
+					<button className="btn mint" onClick={this.toggleEdit.bind(this)}>
 						Edit Profile
 					</button>
 				);
