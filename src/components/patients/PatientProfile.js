@@ -39,7 +39,7 @@ class PatientProfile extends Component {
 	verifyButton() {
 		if (this.isSocialWorker()) {
 			return (
-				<button className="btn btn-primary" onClick={this.verify.bind(this)}>
+				<button className="btn mint" onClick={this.verify.bind(this)}>
 					Verify this patient
 				</button>
 			)
