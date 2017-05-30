@@ -8,7 +8,7 @@ class Hero extends Component {
 					<h1>Support Patients</h1>
 				</div>
 				<p>
-					<a href="#" className="btn mint">How it works</a>
+					<a href="#" className="btn mint">How?</a>
 				</p>
 			</section>
 		);
