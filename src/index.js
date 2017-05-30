@@ -21,6 +21,8 @@ import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
+require('../style/file.scss');
+
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
   	<Router history={browserHistory}>
