@@ -10,12 +10,12 @@
   background-color: #fff;
   background-repeat: no-repeat;
 
-  @include breakpoint(960) { background-image: url('/assets/bg-grey-circle.svg'); }
+  @include breakpoint(960) { background-image: url('../assets/images/bg-grey-circle.svg'); }
 }
 
 %blue-circle {
   background-color: #283a7d;
   background-repeat: no-repeat;
 
-  @include breakpoint(960) { background-image: url('/assets/bg-blue-circle.svg'); }
+  @include breakpoint(960) { background-image: url('../assets/images/bg-blue-circle.svg'); }
 }

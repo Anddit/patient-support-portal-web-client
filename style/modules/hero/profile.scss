@@ -1,9 +1,9 @@
 .hero.profile {
-  background: url('/assets/tmp_hero_group.jpg') center bottom no-repeat;
+  background: url('../assets/images/tmp_hero_group.jpg') center bottom no-repeat;
   background-size: cover;
   color: #fff;
 
-  &.user { background-image: url('/assets/bg-hero-circle.svg') }
+  &.user { background-image: url('../assets/images/bg-hero-circle.svg') }
 
   .container {
     text-align: center;
