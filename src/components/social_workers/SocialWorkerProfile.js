@@ -27,7 +27,7 @@ class SocialWorkerProfile extends Component {
 	verificationRequestButton() {
 		if (this.isPatient()) {
 			return (
-				<button className="btn btn-primary">
+				<button className="btn mint">
 					Request Verification
 				</button>
 			);

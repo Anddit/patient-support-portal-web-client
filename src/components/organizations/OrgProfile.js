@@ -29,7 +29,7 @@ class OrgProfile extends Component {
 	editButton() {
 		if (this.isOwnOrg()) {
 			return (
-				<button className="btn btn-primary" onClick={this.toggleEdit.bind(this)}>
+				<button className="btn mint" onClick={this.toggleEdit.bind(this)}>
 					Edit
 				</button>
 			);
