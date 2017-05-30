@@ -7,9 +7,6 @@ class Hero extends Component {
 				<div className="container wide">
 					<h1>Support Patients</h1>
 				</div>
-				<p>
-					<a href="#" className="btn mint">How?</a>
-				</p>
 			</section>
 		);
 	}

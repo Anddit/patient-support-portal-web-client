@@ -7,10 +7,10 @@ import FeedNav from './feed-nav';
 export default class App extends Component {
   render() {
     return (
-      <div id="root-container" class="wrapper">
+      <div id="root-container" className="wrapper">
       	<Header />
         <Hero />
-      	<div>
+      	<div className="container">
           <FeedNav />
       		{this.props.children}
       	</div>

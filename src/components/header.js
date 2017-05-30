@@ -31,12 +31,12 @@ class Header extends Component {
 
 	render() {
 		return (
-			<header class="header">
-				<p class="logo">
+			<header className="header">
+				<p className="logo">
 					<Link to="/" id="logoBtn">Anddit Patient Support</Link>
 				</p>
 				<nav className="nav small-caps">
-					<ul className="">
+					<ul className="center">
 						{this.renderUserInfo()}
 					</ul>			
 				</nav>
