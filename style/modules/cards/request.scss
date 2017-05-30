@@ -1,0 +1,52 @@
+.card.request {
+
+  p {
+    font-size: 18px;
+    line-height: 1.6em;
+  }
+
+  .request-img { max-width: 100px; margin-top: 20px; }
+
+  // actions (author, sharing)
+  .actions {
+    @extend %clear;
+    margin-top: 40px;
+  }
+
+  .author {
+    @include breakpoint(599, max-width) { width: 100%; margin-bottom: 20px; }
+  }
+
+  .right {
+    float: right;
+    width: 100%;
+
+    @include breakpoint(600) {
+      width: auto;
+      position: absolute;
+      right: 20px; bottom: 20px;
+    }
+  }
+
+  .amount {
+    margin: 0;
+    float: left;
+    margin-right: 6px;
+    padding: 0 6px;
+    font-size: 10px;
+
+    @include breakpoint(600) {
+      margin-right: 20px;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+
+  .progress-bar {
+    position: absolute;
+    left: 0; bottom: 0;
+    border-radius: 0 3px 3px 0;
+
+    span { border-radius: 0 3px 3px 3px; }
+  }
+}

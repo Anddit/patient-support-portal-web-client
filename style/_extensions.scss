@@ -1,0 +1,21 @@
+%clear {
+  @include clearfix;
+}
+
+%shadow {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.08);
+}
+
+%grey-circle {
+  background-color: #fff;
+  background-repeat: no-repeat;
+
+  @include breakpoint(960) { background-image: url('/assets/bg-grey-circle.svg'); }
+}
+
+%blue-circle {
+  background-color: #283a7d;
+  background-repeat: no-repeat;
+
+  @include breakpoint(960) { background-image: url('/assets/bg-blue-circle.svg'); }
+}

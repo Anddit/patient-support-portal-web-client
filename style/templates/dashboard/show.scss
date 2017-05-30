@@ -1,0 +1,215 @@
+#group_dashboard_index,
+#group_dashboard_summary {
+
+  .dashboard-wrapper {
+    padding: 40px 20px;
+    @include breakpoint(768) { padding: 80px 40px; }
+  }
+
+  .navbar ul {
+    a { display: inline-block; padding: 12px 0; }
+    @include breakpoint(1068) { float: left; }
+  }
+
+  .search {
+    margin-top: 20px;
+
+    @include breakpoint(1068) { float: right; width: 580px; margin: 0; }
+
+    input, select, .btn {
+      height: 40px;
+      line-height: 40px;
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .request-type {
+    width: 160px;
+    margin-right: 20px;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0; height: 0;
+      border: 5px solid transparent;
+      border-top: 5px solid #b3b4b3;
+      top: 18px; right: 16px;
+      pointer-events: none;
+    }
+  }
+  .request-name {
+    max-width: 400px;
+  }
+}
+
+.group-request {
+  @extend %clear;
+  margin-bottom: 60px;
+
+  .author {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    @include breakpoint(960) { float: right; width: auto; margin: 10px; }
+  }
+
+  .info {
+    float: left;
+    padding: 0 20px 0 50px;
+    position: relative;
+
+    @include breakpoint(960) { padding: 0 40px 0 50px; width: 60%; }
+
+    .number {
+      background: #28366b;
+      border-radius: 100%;
+      width: 24px; height: 24px;
+      line-height: 24px;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+      position: absolute;
+      top: 0; left: 10px;
+
+      a {
+        color: white;
+      }
+    }
+
+    .description {
+      font-size: 14px;
+      margin: 0;
+      @include breakpoint(768) { font-size: 18px; }
+    }
+
+    .raised {
+      text-transform: uppercase;
+      font-weight: $demibold;
+      color: #a9aec0;
+      margin: 20px 0 10px;
+      font-size: 14px;
+      @include breakpoint(768) { font-size: 22px; }
+    }
+
+    .status {
+      margin-top: 20px;
+
+      span {
+        display: inline-block;
+        padding: 0 14px;
+        height: 40px; line-height: 40px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: $demibold;
+        border-radius: 2px;
+        color: #a0a5b7;
+
+        &.grey { background: #a9aec0; color: #fff; }
+        &.mint { background: #1acbb3; color: #fff; }
+      }
+    }
+  }
+}
+
+.dashboard-table {
+  width: 100%;
+  float: left;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  margin-top: 30px;
+  padding: 0 12px 20px;
+
+  .table {
+    width: 100%;
+    min-width: 1100px;
+  }
+
+  .td { padding: 20px 0 18px 40px; float: left; }
+
+  .donor { width: 26%; }
+  .email { width: 26%; }
+  .date { width: 16%; }
+  .donated { width: 16%; }
+  .after { width: 16%; }
+
+  .deposit-amount { width: 70%; }
+  .date-deposited { width: 30%; }
+
+  .row {
+    @extend %clear;
+    @extend %shadow;
+    display: block;
+    background: #fafa;
+    margin-top: 5px;
+
+    &.no-shadow { box-shadow: none; }
+  }
+
+  .thead {
+    box-shadow: none;
+
+    &.row { background: none; }
+
+    .td { font-weight: 600; padding-bottom: 0; }
+
+    &.extra-pad { padding-left: 40px; }
+  }
+}
+
+.group-payouts {
+  position: relative;
+  padding: 40px 20px;
+
+  @include breakpoint(768) { padding: 40px; }
+
+  .account-number {
+    background: #283461;
+    height: 40px; line-height: 40px;
+    padding: 0 14px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0; left: 0;
+    margin: 0;
+  }
+
+  .group-request {
+    margin: 0;
+
+    .group-request { margin-top: 20px; }
+    .group-request:first-child { margin-top: 40px; }
+    .group-request:last-child { margin-bottom: 40px; }
+
+    .dashboard-table { margin-top: 0; }
+
+    .info {
+      padding: 10px 0 0 0;
+      position: relative;
+    }
+
+    .payout {
+      display: inline-block;
+      white-space: nowrap;
+      padding: 0 14px;
+      height: 40px; line-height: 40px;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: $demibold;
+      border-radius: 2px;
+      color: #a0a5b7;
+      background: #a9aec0;
+      color: #fff;
+
+      @include breakpoint(768) {
+        position: absolute;
+        top: 50%; left: 100%;
+        transform: translate(20px,-50%);
+        margin: 0;
+      }
+    }
+  }
+}

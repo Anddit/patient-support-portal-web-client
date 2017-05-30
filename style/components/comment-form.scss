@@ -1,0 +1,36 @@
+.comment-form {
+  @extend %clear;
+  position: relative;
+  transition: all 150ms ease;
+
+  .input {
+    textarea { height: 40px; padding: 8px 20px; margin: 0; }
+  }
+
+  .btn {
+    position: absolute;
+    top: 0; right: 0;
+    height: 40px; line-height: 40px;
+  }
+
+  &.is-multiline {
+    padding-bottom: 50px;
+
+    .input {
+      padding: 0;
+
+      textarea { padding-right: 50px; }
+    }
+
+    .btn {
+      top: calc(100% - 50px);
+    }
+  }
+
+  &.has-parent {
+    display: none;
+    margin: 10px 0;
+
+    &.is-active { display: block; }
+  }
+}

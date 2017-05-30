@@ -1,0 +1,35 @@
+.feed-filter {
+  @extend %clear;
+
+  li {
+    display: inline-block;
+    margin: 0 30px 0 10px
+  }
+
+  a {
+    color: #4b4b46;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 4px; height: 4px;
+      border-radius: 100%;
+      position: absolute;
+      left: -10px; top: 50%;
+      transform: translateY(-50%);
+      background: #9d9d9b;
+      opacity: 0;
+      transition: opacity 150ms ease;
+    }
+
+    &.is-active:before { opacity: 1; }
+  }
+
+  @include breakpoint(599, max-width) {
+    li { margin-right: 15px; }
+    a { font-size: 8px !important; }
+  }
+}

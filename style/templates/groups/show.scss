@@ -1,0 +1,7 @@
+#groups_show {
+
+  .feed-list {
+    margin-top: 40px;
+    @include breakpoint(768) { margin-top: 60px }
+  }
+}

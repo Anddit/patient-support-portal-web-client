@@ -1,0 +1,35 @@
+body {
+  background: #fff;
+  font-family: $avenir;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #4b4b46;
+}
+
+.wrapper {
+  @extend %clear;
+  width: 100%;
+  background: #f0f0f0;
+}
+
+.container {
+  @extend %clear;
+  width: 88%;
+  margin: 0 auto;
+  max-width: 610px;
+
+  &.wide { max-width: 930px; }
+}
+
+a {
+  color: #5f99d4;
+  text-decoration: none;
+
+  &:hover { color: #283461; }
+}
+
+
+.hero.profile.tinted-background {
+
+
+}

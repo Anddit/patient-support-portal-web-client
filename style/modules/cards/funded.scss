@@ -1,0 +1,32 @@
+.card.funded {
+  @extend %blue-circle;
+  @extend %clear;
+  background-position: -130% 35%;
+  background-size: 80%;
+  color: #fff;
+  padding: 30px 20px;
+
+  span { position: relative }
+  .h2 { margin: 0 0 12px; color: #fff; }
+
+  .btn-close {
+    position: absolute;
+    top: 0; right: 0;
+    padding: 12px 18px;
+  }
+
+  &.admin {
+    background-position: 50% 108%;
+    background-size: 200%;
+
+    form {
+      @extend %clear;
+      display: block;
+      margin-top: 40px;
+
+      .input { margin: 20px 0; }
+    }
+
+    .btn { padding-top: 0; width: 100%; }
+  }
+}

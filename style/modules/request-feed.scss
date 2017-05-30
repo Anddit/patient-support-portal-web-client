@@ -1,0 +1,19 @@
+.request-feed {
+  margin-top: 80px;
+
+  li { @extend %clear; list-style: none; }
+
+  .column {
+    width: 100%;
+    @include breakpoint(768) { width: 48%; }
+  }
+
+  // replies
+  .replies {
+    @extend %clear;
+    float: right;
+    width: 90%;
+
+    .card { margin-top: 10px; }
+  }
+}

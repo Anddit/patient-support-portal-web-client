@@ -1,0 +1,65 @@
+.i { font-style: italic; }
+.b { font-weight: bold; }
+
+.c-white { color: #fff; }
+
+.m-0 { margin: 0; }
+
+.centered { text-align: center; }
+
+.h2 {
+  font-size: 36px;
+  line-height: 1.3333em;
+  color: #40403b;
+  font-weight: $demibold;
+}
+
+.h3 {
+  font-size: 22px;
+  line-height: 1.7272em;
+  color: #40403b;
+  font-weight: $demibold;
+}
+
+.small-caps {
+  font-weight: $demibold;
+  font-size: 12px !important;
+  line-height: 1.5em !important;
+  text-transform: uppercase;
+  color: #a0a5b7;
+}
+
+.amount {
+  background: #1acbb3;
+  display: inline-flex;
+  align-items: center;
+  flex-basis: fit-content;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: $demibold;
+  color: #fff;
+  padding: 0 16px;
+  border-radius: 2px;
+  text-indent: -2px;
+
+  &.is-funded {
+    background: #619ad2;
+  }
+
+  &.no-funds {
+    background: #fff;
+    color: #4b4b46;
+  }
+}
+
+.turquoise-text {
+  color: #619ad2;
+}
+
+.pipe {
+  margin: 0 0.75em;
+}
+
+.pending-text {
+  color: #f4c242;
+}

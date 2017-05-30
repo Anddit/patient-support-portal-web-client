@@ -1,0 +1,46 @@
+.twitter-typeahead {
+  width: 100%;
+  font-size: 14px;
+
+  .tt-menu {
+    width: 100%;
+    border-radius: 2px;
+    margin-top: 10px;
+  }
+
+  .tt-dataset {
+    @extend %clear;
+    background: #fff;
+    color: #4b4b46;
+    width: 100%;
+    padding: 20px;
+
+    + .tt-dataset { padding-top: 0; }
+  }
+
+  .title {
+    color: #619ad2;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  a { color: #4b4b46; }
+
+  .tt-suggestion {
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 5em;
+    font-weight: normal;
+    cursor: pointer;
+    line-height: 1em;
+    transition: background 150ms ease-in-out;
+    float: left;
+    clear: both;
+
+    &:hover { background: #f0f0f0; }
+  }
+
+  .tt-cursor { opacity: 1; }
+
+  .tt-highlight { font-weight: 600; color: #000; }
+}

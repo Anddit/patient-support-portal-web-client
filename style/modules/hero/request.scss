@@ -1,0 +1,15 @@
+.hero.request {
+  background: url('/assets/tmp_hero_group.jpg') center bottom no-repeat;
+  background-image: url('/assets/bg-hero-circle.svg');
+  background-size: cover;
+  color: #fff;
+
+  h1 {
+    font-size: 18px;
+    line-height: 1.3em;
+    @include breakpoint(768) { font-size: 24px; }
+    @include breakpoint(960) { font-size: 48px; }
+  }
+
+  a { color: #5f99d4; }
+}

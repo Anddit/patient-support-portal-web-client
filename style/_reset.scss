@@ -1,0 +1,45 @@
+/* Reset + base: */
+*, *:before, *:after { box-sizing: border-box; }
+
+html { overflow-y: scroll; } /* always show scrollbar in non-IE */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5 { font-weight: normal; }
+
+button, input, select, textfield, textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  outline: 0;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+  resize: none;
+}
+
+button:hover { cursor: pointer; }
+
+a { text-decoration: none; }
+
+p { margin: 0; }
+p + p { margin-top: 1em; }
+
+
+ul, ol, dl { list-style: none; margin: 0; padding: 0; }
+
+body, input, select, textarea, button {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { -ms-interpolation-mode: bicubic; }
+strong { font-weight: bold; }
+em { font-style: italic; }

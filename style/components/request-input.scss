@@ -1,0 +1,17 @@
+.request-input {
+
+  .hashtags {
+    background: #fff;
+    padding: 10px 20px 5px;
+
+    li {
+      display: inline-block;
+      color: #fff;
+      background: #abaebf;
+      border-radius: 2px;
+      padding: 5px 8px 3px;
+
+      + li { margin-left: 6px; }
+    }
+  }
+}

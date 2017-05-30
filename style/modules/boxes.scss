@@ -1,0 +1,60 @@
+.center-text {
+	text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+	.box-container {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+		display: flex;
+
+		.left-box {
+			@include breakpoint(500) { 
+				float: left;
+				width: 25%;
+				margin-right: 3em;
+			}
+			// border-color: red;
+			// border-style: solid;
+			// border-width: 2px;
+		}
+
+		.middle-box {
+			@include breakpoint(500) { 
+				display: inline-block;
+				width: 25%;
+				margin: auto;
+				min-height: 50px;
+			}			
+		}
+
+		.right-box {
+
+			@include breakpoint(500) {
+				float: right;			
+				width: 25%;
+				margin-left: 3em;
+				&:after {
+					clear: left;
+				}	
+			}
+		}
+	}
+}
+
+
+
+@media only screen and (max-width: 499px) {
+	.box-container {
+		li { text-align:left; float: left; clear: left; padding:0.1em 1em }
+
+		.center-mobile {
+			width: 100%;
+			display: block;
+			&:after {
+				clear: both;
+			}			
+		}		
+	}
+}

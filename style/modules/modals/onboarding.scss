@@ -1,0 +1,23 @@
+.modal.onboarding {
+  @extend %grey-circle;
+  background-position: 195% center;
+  background-size: 80%;
+
+  &.on3 {
+    background-position: 460% center;
+    background-size: 90%;
+
+    @include breakpoint(960) {
+      .column { max-width: 370px; }
+    }
+  }
+
+  h1 { margin-top: 0.25em; line-height: 1.3em; }
+
+  .actions {
+    @extend %clear;
+    width: 100%;
+    clear: both;
+    padding-top: 40px;
+  }
+}

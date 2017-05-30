@@ -1,0 +1,16 @@
+.card.activity {
+
+
+  // nested card
+  .card.request { 
+    background: #fff; 
+    @include breakpoint(768) { width: 610px; }
+  }
+
+  // admin
+  .admin-actions {
+    margin-top: 1em;
+
+    .btn + .btn { margin-left: 16px; }
+  }
+}

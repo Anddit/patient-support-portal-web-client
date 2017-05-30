@@ -1,0 +1,26 @@
+.card.cta {
+  @extend %blue-circle;
+  background-position: 260% 35%;
+  background-size: 80%;
+  color: #fff;
+  padding: 40px 20px;
+
+  .h2 { margin: 0; color: #fff; }
+
+  .info {
+    @include breakpoint(960) {
+      width: 60%;
+    }
+  }
+
+  .actions {
+    margin-top: 40px;
+
+    @include breakpoint(960) {
+      margin: 0;
+      position: absolute;
+      top: 50%; right: 40px;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.card.group {
+  padding-top: 20px;
+  overflow: hidden;
+  
+  @include breakpoint(600) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hashtitle {
+    font-size: 26px;
+    font-weight: $demibold;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+
+    @include breakpoint(600) {
+      margin-top: 0px;
+      position: absolute;
+      top: 0; left: 55%;
+      height: 120%; width: auto;
+      transform: translateY(-5%);
+      border-radius: 15% 0 0 15% / 50% 0 0 50%;
+    }
+  }
+}

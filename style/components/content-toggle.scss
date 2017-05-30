@@ -1,0 +1,12 @@
+.content-toggle {
+  position: relative;
+  padding-left: 40px;
+  width: 100%;
+
+  .toggle-btn {
+    position: absolute;
+    top: 22px; left: 0;
+
+    svg { display: block; width: 24px; }
+  }
+}

@@ -1,0 +1,26 @@
+// feed items
+.feed-transition {
+  will-change: transform, opacity;
+  transition: all 500ms ease;
+  transform: scale(1);
+  opacity: 1;
+}
+.feed-enter {
+  transform: scale(1.02);
+  opacity: 0;
+}
+.feed-leave { display: none; }
+
+
+// request hashtags
+.hashtag-transition {
+  will-change: transform, opacity;
+  transition: all 500ms ease;
+  transform: scale(1);
+  opacity: 1;
+}
+.hashtag-enter {
+  transform: scale(1.02);
+  opacity: 0;
+}
+.hashtag-leave { display: none; }

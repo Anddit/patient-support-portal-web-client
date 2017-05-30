@@ -1,0 +1,60 @@
+.card.request-activity {
+  @extend %clear;
+  padding-bottom: 10px;
+
+  .content { padding-left: 60px; }
+  .donation { padding-right: 80px; }
+
+
+  // author overrides
+  .author {
+    height: auto;
+    padding-left: 0;
+    display: block;
+
+    a { display: inline; }
+  }
+
+  .author-photo { top: 20px; left: 20px; }
+
+  .pipe {
+    margin: 0 0.25em;
+  }
+
+  @include breakpoint(959, max-width) {
+    .pipe { display: none; }
+    .when { display: block; clear: left; }
+  }
+
+
+  // actions
+  .actions {
+    @extend %clear;
+    font-size: 14px !important;
+    font-weight: $demibold;
+    margin-top: 14px;
+    line-height: 1em;
+    color: #a0a5b7;
+
+    .comment-count svg { fill: #a0a5b7; }
+    .btn-reply { float: right; }
+  }
+
+
+  // comments
+  .comment { margin-top: 6px; }
+
+  .comment-img {
+    display: block;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  // donations
+  .amount {
+    position: absolute;
+    top: 50%; right: 20px;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}

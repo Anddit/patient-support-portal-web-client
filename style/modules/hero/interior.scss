@@ -1,0 +1,39 @@
+.hero.interior {
+  min-height: 0;
+  padding: 80px 0 30px;
+  background: url('/assets/tmp_hero_group.jpg') center bottom no-repeat;
+  background-image: url('/assets/bg-hero-circle.svg');
+  background-size: cover;
+  color: #fff;
+  @include breakpoint(600) { padding: 120px 0 100px; }
+
+  h1 {
+    font-size: 18px;
+    @include breakpoint(768) { font-size: 24px; }
+    @include breakpoint(960) { font-size: 48px; }
+  }
+
+  h1.smaller-heading {
+    font-size: 10px;
+    @include breakpoint(768) { font-size: 18px; }
+    @include breakpoint(960) { font-size: 30px; }    
+  }
+
+  &.make-request {
+    text-align: center;
+
+    .container { max-width: 500px; }
+
+    h1 {
+      line-height: 1.3em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5em;
+      margin-top: 1em;
+      @include breakpoint(768) { font-size: 22px; }
+    }
+  }
+}

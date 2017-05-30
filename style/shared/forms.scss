@@ -1,0 +1,205 @@
+input, textarea { font-family: $avenir; color: #4b4b46; }
+@include placeholder { font-family: $avenir; color: #aeaeae; }
+
+.form-nav {
+  text-align: center;
+  margin-bottom: 20px;
+
+  a {
+    display: inline-block;
+    padding: 0 10px 10px;
+    color: #a9aec0;
+
+    &.is-active { font-weight: $demibold; color: #4b4b46; }
+  }
+}
+
+.tm-tag {
+  padding: 0 10px 10px;
+}
+
+.input {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  float: left;
+
+  &.half {
+    @include breakpoint(768) {
+      width: 48%;
+      + .half { float: right; }
+    }
+  }
+
+  &.third {
+    @include breakpoint(768) {
+      width: 32%;
+
+      + .third { margin-left: 2% }
+
+      + .third + .third { float: right; }
+    }
+  }
+
+  &.fourth {
+    @include breakpoint(768) {
+      width: 25%;
+
+      + .fourth {
+        padding-left: 2%
+      }
+
+      // + .fourth + .fourth + .fourth { float: right; }
+    }
+  }
+
+  &.inline-button {
+    padding-right: 20px
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  textarea,
+  select {
+    @extend %shadow;
+    background: #fff;
+    border-radius: 2px;
+    height: 50px;
+    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  select {
+    font-weight: $demibold;
+    position: relative;
+  }
+
+  textarea {
+    padding: 12px 20px;
+    height: auto; min-height: 40px;
+  }
+
+  button {
+    position: absolute;
+    top: 0; right: 0;
+  }
+
+  @include placeholder { font-family: $avenir; color: #aeaeae; }
+
+
+  // expanding textarea
+  &.expanding {
+    textarea {
+      padding-top: 12px;
+      height: 50px;
+    }
+  }
+
+
+  // nested label
+  &.nested-label {
+    padding-left: 50px;
+    position: relative;
+    display: block;
+
+    label {
+      position: absolute;
+      top: 0; left: 0;
+      width: 50px; height: 50px;
+      background: #a9aec0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      border-radius: 2px 0 0 2px;
+    }
+  }
+}
+
+
+.checkbox {
+  position: relative;
+  line-height: 1em;
+  margin-top: 20px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  label {
+    padding-left: 30px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    &:hover:before { background: #8c92a6; }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0; top: -2px;
+      width: 16px; height: 16px;
+      border-radius: 100%;
+      background: #a9adc0;
+    }
+  }
+
+  input:checked + label:before {
+    background: #1acbb3 url('/assets/icon-check.svg') center center no-repeat;
+  }
+}
+
+
+.text-checkbox {
+  position: relative;
+
+  + .text-checkbox { margin-top: 20px; }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  label {
+    @extend %shadow;
+    position: relative;
+    border-radius: 2px;
+    display: block;
+    padding: 20px 30px 40px 70px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 150ms ease;
+
+    &:hover { background: #d8d8d8; }
+  }
+
+  .label {
+    font-weight: $demibold;
+    position: absolute;
+    top: 20px; left: 20px;
+  }
+
+  p { margin: 0; }
+
+  input:checked + label {
+    background: #1acbb3;
+    color: #fff;
+    cursor: default;
+  }
+}
+
+
+.input-select {
+  background: #fff;
+  display: block;
+
+}
+
+.invalid { color: red !important; }
+.is-invalid { color: red !important; }

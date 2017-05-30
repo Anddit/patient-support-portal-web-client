@@ -1,0 +1,12 @@
+#home_index {
+
+  .hero { margin: 0; }
+
+  // feed
+  .feed {
+    transform: translateY(-60px); 
+    @include breakpoint(600) { transform: translateY(-120px);  }
+  }
+
+  .feed-filter a { color: #fff; }
+}

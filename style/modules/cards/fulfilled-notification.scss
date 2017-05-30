@@ -1,0 +1,13 @@
+.card.fulfilled-notification {
+  background: #283a7d;
+
+  .when { color: #a0a5b7; }
+
+  // nested card
+  .card.request {
+    background: #fff;
+    @include breakpoint(768) { width: 610px; }
+
+    + p { margin-top: 1em; }
+  }
+}

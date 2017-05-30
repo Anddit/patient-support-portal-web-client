@@ -1,0 +1,33 @@
+.card {
+  @extend %shadow;
+  background: #fafafa;
+  margin-top: 20px;
+  border-radius: 2px;
+  position: relative;
+  padding: 10px;
+
+  @include breakpoint(600) { padding: 20px; }
+
+  &.is-clickable {
+    transition: background 150ms ease;
+
+    &:hover {
+      cursor: pointer;
+      background: #fff;
+    }
+  }
+
+  // sharing
+  .share {
+    float: right;
+
+    li {
+      display: inline-block;
+      margin-left: 6px;
+      line-height: 0;
+      @include breakpoint(600) { margin-left: 10px; }
+
+      &:first-child { margin: 0; }
+    }
+  }
+}

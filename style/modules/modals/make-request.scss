@@ -1,0 +1,33 @@
+.modal.make-request {
+  background: #fafafa;
+  max-width: 450px;
+
+  // text
+  h1 {
+    margin-top: 0;
+
+    @include breakpoint(768) { font-size: 36px; }
+  }
+
+  // form
+  form { margin-top: 40px; }
+  .input { margin-top: 20px; padding-right: 0; }
+
+  .small-caps {
+    font-size: 14px !important;
+    margin: 0 0 4px;
+    color: #40403b;
+
+    + .input { margin-top: 0; }
+  }
+
+  .char-limit {
+    float: right;
+    color: #979794;
+    text-transform: none;
+  }
+
+  // actions
+  .actions { margin-top: 40px; float: left; }
+  .btn { width: 48%; }
+}

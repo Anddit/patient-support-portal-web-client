@@ -1,0 +1,64 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3150950, 2016-01-08T15:29:36-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: AvenirNextLTPro-Regular by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-regular/
+ * 
+ * Webfont: AvenirNextLTPro-It by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-italic/
+ * 
+ * Webfont: AvenirNextLTPro-Demi by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-demi/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3150950
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Copyright &#x00A9; 2004 - 2012 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir Next is a trademark of Linotype
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'avenir-next';
+  font-weight: 'normal';
+  font-style: 'normal';
+  src: url('/assets/301466_0_0.eot');
+  src: url('/assets/301466_0_0.eot?#iefix') format('embedded-opentype'),
+       url('/assets/301466_0_0.woff2') format('woff2'),
+       url('/assets/301466_0_0.woff') format('woff'),
+       url('/assets/301466_0_0.ttf') format('truetype');
+  }
+ 
+  
+@font-face {
+  font-family: 'avenir-next';
+  font-weight: 'normal';
+  font-style: 'italic';
+  src: url('/assets/301466_1_0.eot');
+  src: url('/assets/301466_1_0.eot?#iefix') format('embedded-opentype'),
+       url('/assets/301466_1_0.woff2') format('woff2'),
+       url('/assets/301466_1_0.woff') format('woff'),
+       url('/assets/301466_1_0.ttf') format('truetype');
+  }
+ 
+  
+@font-face {
+  font-family: 'avenir-next';
+  font-weight: '600';
+  font-style: 'normal';
+  src: url('/assets/301466_2_0.eot');
+  src: url('/assets/301466_2_0.eot?#iefix') format('embedded-opentype'),
+       url('/assets/301466_2_0.woff2') format('woff2'),
+       url('/assets/301466_2_0.woff') format('woff'),
+       url('/assets/301466_2_0.ttf') format('truetype');
+  }
+ 

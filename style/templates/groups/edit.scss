@@ -1,0 +1,152 @@
+#group_form {
+  margin-top: 1rem;
+
+  select{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.group_edit {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 910px;
+  overflow: hidden;
+  margin-bottom: 5px;
+
+  .mb1{
+    margin-bottom: 15px;
+  }
+
+  .mt0{
+    margin-top: 0px;
+  }
+
+  .mt1{
+    margin-top: 15px;
+  }
+
+  .choose-profile {
+    position: relative;
+    text-decoration: uppercase;
+    margin: 10px 0;
+
+    [type="file"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.01;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  .check_box_container{
+    display: none;
+  }
+
+  .row {
+    overflow: auto;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+  #account_details_form {
+    h1 {
+      margin-top: 2rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    text-transform: uppercase;
+  }
+
+  .group-edit-control{
+    float:left;
+    width: 25%;
+    background: #fff;
+    border-radius: 2px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.08);
+
+    li {
+      text-transform: uppercase;
+      padding-left: 15px;
+      position: relative;
+      cursor: pointer;
+
+      &.active::before{
+        content: "";
+        height: 7px;
+        width: 7px;
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        left: -5px;
+        top: 6px;
+        background-color: #a5a5a2;
+
+      }
+    }
+  }
+
+  .group-edit-content{
+    float: right;
+    padding-left: 40px;
+    width: 75%;
+  }
+
+  #external_account_details{
+    #radio_container{
+      display: none;
+    }
+
+    .payment-picker{
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #4b4b46;
+      font-weight: 100;
+      position: relative;
+      cursor: pointer;
+
+      &.checkable {
+        margin-left: 30px;
+
+        &.active::before {
+          background-color: #1ACBB2;
+          background-image: url('/assets/icon_checkmark.svg');
+        }
+
+        &::before {
+          background-color: #a9adc0;
+          background-repeat: no-repeat;
+          background-position: center;
+          content: "";
+          height: 20px;
+          width: 20px;
+          border-radius: 100%;
+          display: block;
+          position: absolute;
+          left: -25px;
+          top: -3px;
+
+        }
+      }
+    }
+
+    a[href] {
+      color: #5f99d4;
+    }
+  }
+}

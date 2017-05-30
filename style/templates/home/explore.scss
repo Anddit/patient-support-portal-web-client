@@ -1,0 +1,10 @@
+#home_explore {
+
+  .hero { margin: 0; }
+
+  // feed
+  .feed {
+    margin-top: 40px;
+    @include breakpoint(768) { margin-top: 60px }
+  }
+}

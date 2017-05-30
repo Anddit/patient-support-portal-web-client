@@ -1,0 +1,57 @@
+$subnav-height: 50px;
+
+.subnav-container {
+  @extend %clear;
+  position: sticky;
+  z-index: $z-subnav;
+  top: 80px;
+}
+
+.subnav {
+  background: #283461;
+  overflow: hidden;
+  height: $subnav-height;
+  width: 100%;
+
+  ul { white-space: nowrap; }
+
+  li {
+    display: inline-block;
+    padding: 16px 0;
+    max-height: $subnav-height;
+    position: relative;
+    margin: 0 30px 0 10px
+  }
+
+  a {
+    color: #949ab0;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    position: relative;
+    transition: color 150ms ease;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 4px; height: 4px;
+      border-radius: 100%;
+      position: absolute;
+      left: -10px; top: 50%;
+      transform: translateY(-50%);
+      background: #949ab0;
+      opacity: 0;
+      transition: opacity 150ms ease;
+    }
+
+    &.is-active {
+      color: #fff;
+      &:before { opacity: 1; }
+    }
+  }
+
+  // hide scrollbar
+  .container {
+    overflow: auto;
+    height: calc($subnav-height + 25px);
+  }
+}

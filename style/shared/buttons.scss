@@ -1,0 +1,135 @@
+// general use buttons
+.btn {
+  @extend %shadow;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  text-transform: uppercase;
+  justify-content: center;
+  font-weight: $demibold;
+  color: #fff;
+  line-height: 40px;
+  padding: 3px 12px 0;
+  border-radius: 25px;
+  transition: background 150ms ease;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+
+  @include breakpoint(600) {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    padding: 3px 22px 0;
+  }
+
+  &:hover { color: #d9d9d9; }
+
+  // smaller in size
+  &.sm {
+    height: 30px;
+    line-height: 30px;
+    padding: 2px 20px 0;
+
+    @include breakpoint(600) { height: 40px; line-height: 40px; }
+  }
+
+  // colors
+  &[disabled=true],
+  &.is-invalid {
+    background: #fff !important;
+    color: #a9aec0 !important;
+    cursor: default !important;
+  }
+
+  &.mint, &[disabled=false] { background: #1acbb3; }
+  &.mint:hover, &[disabled=false]:hover { background: #16a693; }
+
+  &.white       { background: #fff; color: #4b4b46; }
+  &.white:hover { background: #d8d8d8; }
+
+  &.red       { background: #ef5956; }
+  &.red:hover { background: #d64f4d; }
+
+  &.blue       { background: #619ad2; }
+  &.blue:hover { background: #5282b1; }
+}
+
+
+// social buttons
+.btn-social {
+  @extend %shadow;
+  display: inline-block;
+  width: 40px; height: 40px;
+  border-radius: 100%;
+  background: #fff;
+  transition: background 150ms ease;
+  position: relative;
+
+  &.liked {
+    background: #619ad2;
+    path { fill: #fff }
+  }
+
+  svg {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  path { fill: #a9aec0; transition: fill 150ms ease; }
+
+  &:hover {
+    background: #619ad2;
+    path { fill: #fff }
+  }
+
+  &.is-shared {
+    path { fill: #619ad2 }
+  }
+
+  // larger button with text
+  &.lg {
+    width: auto;
+    padding-left: 50px;
+    padding-right: 20px;
+    border-radius: 3em;
+    line-height: 40px;
+    color: #fff;
+    background: #619ad2;
+
+    svg { left: 26px; }
+    path { fill: #fff; }
+
+    &.twitter {
+      background: #69ace0;
+      &:hover { background: #5093c7; }
+    }
+
+    &.facebook {
+      background: #39569a;
+      &:hover { background: #2c488a; }
+    }
+  }
+}
+
+// social
+.btn.facebook {
+  background: #39569a;
+  &:hover { background: #2c488a; }
+}
+
+
+
+// special use buttons
+.btn-reply {
+  text-transform: uppercase;
+  color: #a0a5b7;
+  transition: color 150ms ease;
+
+  svg { fill: #a0a5b7; transition: fill 150ms ease; }
+
+  &:hover {
+    color: #1acbb3;
+    svg { fill: #1acbb3; }
+  }
+}

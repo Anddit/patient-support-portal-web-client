@@ -1,0 +1,21 @@
+.author {
+  position: relative;
+  padding-left: 60px;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  margin: 0;
+
+  a { display: block; }
+
+  .who { font-weight: $demibold; font-style: italic; }
+  .what { color: #4b4b46; font-style: italic; }
+  .when { color: #a0a5b7; }
+}
+
+.author-photo { 
+  position: absolute;
+  top: 0; left: 0;
+  width: 50px; height: 50px;
+  border-radius: 38% 40% / 38% 40%;
+}

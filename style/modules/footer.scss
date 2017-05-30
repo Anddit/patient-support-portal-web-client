@@ -1,0 +1,53 @@
+.footer {
+  background: #fff;
+  padding: 40px 0 20px;
+  margin-top: 80px !important;
+  font-weight: $demibold;
+  position: relative;
+
+  @include breakpoint(768) { padding: 100px 0 40px; }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%; padding-top: 3.97404703974%;
+    position: absolute;
+    top: -2px; left: 0;
+    background: url('/assets/footer-mask.svg') center top no-repeat;
+    background-size: 105%;
+  }
+
+  // first row
+  .col {
+    width: 100%;
+    margin-top: 40px;
+
+    @include breakpoint(768) {
+      width: 50%;
+      float: left;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(960) { width: 25%; }
+  }
+
+  dt { color: #40403b; margin-bottom: 1em; }
+
+  dd {
+    margin: 0.5em 0 0 0;
+    letter-spacing: 0.1em;
+  }
+
+  .sponsor {
+    font-size: 14px;
+    img { width: 160px; margin-bottom: 10px; }
+  }
+
+  // second row
+  .copyright {
+    margin-top: 40px;
+    color: #4b4b46;
+    a { margin-left: 10px; }
+  }
+}

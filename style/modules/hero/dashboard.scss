@@ -1,0 +1,40 @@
+.hero.dashboard {
+  min-height: 0;
+  padding: 80px 0 30px;
+  background: url('/assets/tmp_hero_group.jpg') center bottom no-repeat;
+  background-image: url('/assets/bg-hero-circle.svg');
+  background-size: cover;
+  color: #fff;
+  @include breakpoint(600) { padding: 120px 0 60px; }
+  @include breakpoint(960) { padding: 220px 0 160px; }
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    width: 100%; max-width: 300px;
+    margin: 40px 0;
+
+    @include breakpoint(960) {
+      max-width: 200px;
+      &:nth-child(2) { max-width: 440px }
+    }
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f0f0f0;
+    @include breakpoint(600) { font-size: 18px; }
+    @include breakpoint(960) { font-size: 22px; }
+  }
+
+  .lg {
+    font-size: 22px;
+    color: #fff;
+    @include breakpoint(600) { font-size: 30px; }
+    @include breakpoint(960) { font-size: 78px; }
+  }
+}

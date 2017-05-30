@@ -1,0 +1,23 @@
+.modal.sign-up {
+  @extend %grey-circle;
+  background-position: 125% center;
+  background-size: 60%;
+  max-width: 770px;
+
+  h1 { margin-top: 0; }
+
+  .actions {
+    @include breakpoint(960) {
+      position: absolute;
+      top: 50%; right: 40px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .btn svg {
+    width: 16px; height: 16px;
+    margin-right: 10px;
+    display: inline-block;
+    transform: translateY(-2px);
+  }
+}
