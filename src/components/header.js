@@ -12,11 +12,11 @@ class Header extends Component {
 
 	renderLinks() {
 		if (this.props.authenticated) {
-			return <Link className="nav-link" to="/signout">Sign Out</Link>
+			return <Link className="btn mint sm" to="/signout">Sign Out</Link>
 		}	else {
 			return [
-				<Link className="nav-link" to="/signin" key={1}>Sign in</Link>,
-				<Link className="nav-link" to="/signup" key={2}>Sign up</Link>
+				<Link className="btn mint sm" to="/signin" key={1}>Sign in</Link>,
+				<Link className="btn mint sm" to="/signup" key={2}>Sign up</Link>
 			];
 		}
 	}
