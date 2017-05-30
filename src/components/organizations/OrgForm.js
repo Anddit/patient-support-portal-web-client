@@ -67,7 +67,7 @@ class OrgForm extends Component {
 				</fieldset>				
 												
 				{this.renderAlert()}
-				<button action="submit" className="btn btn-primary">Save</button>
+				<button action="submit" className="btn mint">Save</button>
 			</form>
 		);
 	}
