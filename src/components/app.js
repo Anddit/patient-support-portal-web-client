@@ -8,7 +8,7 @@ export default class App extends Component {
   render() {
     return (
       <div id="root-container" className="wrapper">
-      	<Header />
+      	<Header fullSPA={true} />
         <Hero />
       	<div className="container">
           <FeedNav />

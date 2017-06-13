@@ -7,7 +7,9 @@ import * as actions from '../actions';
 class Header extends Component {
 
 	componentWillMount() {
-		this.props.checkAuth();
+		if (this.props.fullSPA) {
+			this.props.checkAuth();
+		}
 	}
 
 	renderLinks() {

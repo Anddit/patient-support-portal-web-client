@@ -12,7 +12,7 @@ class LitePortal extends Component {
 	render() {
 		return (
       <div id="root-container" className="wrapper">
-      	<Header />
+      	<Header fullSPA={false} />
         <Hero />
       	<div className="container">
       		<h2>Search Organizations</h2>
