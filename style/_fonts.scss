@@ -27,38 +27,38 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-// @font-face {
-//   font-family: 'avenir-next';
-//   font-weight: 'normal';
-//   font-style: 'normal';
-//   src: url('../assets/fonts/301466_0_0.eot');
-//   src: url('../assets/fonts/301466_0_0.eot?#iefix') format('embedded-opentype'),
-//        url('../assets/fonts/301466_0_0.woff2') format('woff2'),
-//        url('../assets/fonts/301466_0_0.woff') format('woff'),
-//        url('../assets/fonts/301466_0_0.ttf') format('truetype');
-//   }
+@font-face {
+  font-family: 'avenir-next';
+  font-weight: 'normal';
+  font-style: 'normal';
+  src: url('../assets/fonts/301466_0_0.eot');
+  src: url('../assets/fonts/301466_0_0.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/301466_0_0.woff2') format('woff2'),
+       url('../assets/fonts/301466_0_0.woff') format('woff'),
+       url('../assets/fonts/301466_0_0.ttf') format('truetype');
+  }
  
   
-// @font-face {
-//   font-family: 'avenir-next';
-//   font-weight: 'normal';
-//   font-style: 'italic';
-//   src: url('../assets/fonts/301466_1_0.eot');
-//   src: url('../assets/fonts/301466_1_0.eot?#iefix') format('embedded-opentype'),
-//        url('../assets/fonts/301466_1_0.woff2') format('woff2'),
-//        url('../assets/fonts/301466_1_0.woff') format('woff'),
-//        url('../assets/fonts/301466_1_0.ttf') format('truetype');
-//   }
+@font-face {
+  font-family: 'avenir-next';
+  font-weight: 'normal';
+  font-style: 'italic';
+  src: url('../assets/fonts/301466_1_0.eot');
+  src: url('../assets/fonts/301466_1_0.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/301466_1_0.woff2') format('woff2'),
+       url('../assets/fonts/301466_1_0.woff') format('woff'),
+       url('../assets/fonts/301466_1_0.ttf') format('truetype');
+  }
  
   
-// @font-face {
-//   font-family: 'avenir-next';
-//   font-weight: '600';
-//   font-style: 'normal';
-//   src: url('../assets/fonts/301466_2_0.eot');
-//   src: url('../assets/fonts/301466_2_0.eot?#iefix') format('embedded-opentype'),
-//        url('../assets/fonts/301466_2_0.woff2') format('woff2'),
-//        url('../assets/fonts/301466_2_0.woff') format('woff'),
-//        url('../assets/fonts/301466_2_0.ttf') format('truetype');
-//   }
-//  
+@font-face {
+  font-family: 'avenir-next';
+  font-weight: '600';
+  font-style: 'normal';
+  src: url('../assets/fonts/301466_2_0.eot');
+  src: url('../assets/fonts/301466_2_0.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/301466_2_0.woff2') format('woff2'),
+       url('../assets/fonts/301466_2_0.woff') format('woff'),
+       url('../assets/fonts/301466_2_0.ttf') format('truetype');
+  }
+ 
