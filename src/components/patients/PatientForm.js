@@ -31,29 +31,29 @@ class PatientForm extends Component {
 
 		return (
 			<form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
-				<fieldset className="form-group">
+				<fieldset className="input request-input">
 					<label>Email:</label>
-					<input {...email} className="form-control" />
+					<input {...email} type="text" />
 				</fieldset>
 
-				<fieldset className="form-group">
+				<fieldset className="input request-input">
 					<label>Name:</label>
-					<input {...name} className="form-control" />
+					<input {...name} type="text" />
 				</fieldset>
 
-				<fieldset className="form-group">
+				<fieldset>
 					<label>Indication: cancer</label>
-					<input {...indication} type="checkbox" className="form-control" />
+					<input {...indication} type="checkbox" />
 				</fieldset>
 
-				<fieldset className="form-group">
+				<fieldset>
 					<label>Indication: blood disorder</label>
-					<input {...indication} type="checkbox" className="form-control" />
+					<input {...indication} type="checkbox" />
 				</fieldset>
 
-				<fieldset className="form-group">
+				<fieldset>
 					<label>Indication: illness</label>
-					<input {...indication} type="checkbox" className="form-control" />
+					<input {...indication} type="checkbox" />
 				</fieldset>				
 												
 				{this.renderAlert()}
