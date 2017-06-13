@@ -17,6 +17,8 @@ import SocialWorkerProfile from './components/social_workers/SocialWorkerProfile
 import OrgList from './components/organizations/OrgList';
 import OrgProfile from './components/organizations/OrgProfile';
 
+import LitePortal from './components/lite_portal';
+
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
@@ -26,7 +28,8 @@ require('../style/application.scss');
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
   	<Router history={browserHistory}>
-  		<Route path="/" component={App}>
+      <Route path="/" component={LitePortal} />
+  		<Route path="/beta-spa" component={App}>
   			<Route path="/signin" component={Signin} />
   			<Route path="/signup" component={Signup} />  			
   			<Route path="/signout" component={Signout} />
